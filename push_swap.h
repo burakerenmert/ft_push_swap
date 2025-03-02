@@ -9,8 +9,8 @@ typedef struct s_list
 {
     int data;
     int index;
-    struct s_stack *next;
+    struct s_list *next;
 }stack;
-
+init_list (char num);
 
 #endif
