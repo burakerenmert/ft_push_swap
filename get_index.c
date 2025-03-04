@@ -3,44 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   get_index.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:33:02 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/27 22:53:46 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/04 05:11:02 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	get_array(stack **head)
+void	get_array(stack **first)
 {
-	stack *first;
+	stack *start;
 	int size;
 	int *arr;
 	int i;
 	
-	first = *head;
+	start = *first;
 	size = 1;
 	i = 0;
-	while(first->next != NULL)
+	while(start->next != NULL)
 	{
-		first = first->next;
+		start = start->next;
 		size++;
 	}
-	first = *head;
+	start = *first;
 	arr = malloc(sizeof(int) * size);
 	if (!arr)
 		return;
 	while (i < size)
 	{
-		arr[i++] = first->data;
-		first = first->next;
+		arr[i++] = start->data;
+		start = start->next;
 	}
 	bubble_sort(arr, size);
-	get_index(*head, arr, size);
+	get_index(*first, arr, size);
     free(arr);
 }
-void	bubble_sort(int *arr, int size)
+void    bubble_sort(int *arr, int size)
 {
     int swapped = 1;
     while (swapped)
@@ -61,7 +61,7 @@ void	bubble_sort(int *arr, int size)
         size--;
     }
 }
-void	get_index(stack *head, int *arr, int size)
+void    get_index(stack *head, int *arr, int size)
 {
     stack *first;
     int i;
