@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buramert <buramert@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:08:06 by buramert          #+#    #+#             */
-/*   Updated: 2024/10/23 17:49:34 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/04 02:52:10 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# define MAX_INT 2147483647
+# define MIN_INT -2147483648
 typedef struct s_list
 {
 	void			*content;

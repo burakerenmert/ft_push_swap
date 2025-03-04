@@ -6,7 +6,7 @@ LIBFT = $(LIBFT_DIR)/libft.a
 PRINTF_DIR = ft_printf
 PRINTF = $(PRINTF_DIR)/libftprintf.a
 
-SRC = push_swap.c check.c swap_functions.c push_functions.c rotate_functions.c reverse_rotate_functions.c get_index.c radix.c
+SRC = push_swap.c error_check.c atoi.c
 OBJ = $(SRC:.c=.o)
 
 NAME = push_swap

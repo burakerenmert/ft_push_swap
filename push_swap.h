@@ -5,12 +5,15 @@
 #include "ft_printf/ft_printf.h"
 #include "stdlib.h"
 
-typedef struct s_list
+typedef struct t_list
 {
     int data;
     int index;
-    struct s_list *next;
+    struct t_list *next;
 }stack;
-init_list (char num);
-
+void	error_check(char **args, stack **first);
+void	fill_stack(int arg, stack **first);
+void    print_error();
+int ft_atoi(const char *str);
+void	check_duplicate_numbers(stack **first);
 #endif
