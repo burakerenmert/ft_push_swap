@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/04 05:24:31 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/04 05:47:37 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int main(int ac, char **av)
 	first_a = NULL;
 	first_b = NULL;
 	error_check(av, &first_a);
+	check_sorted(first_a);
 	get_array(&first_a);
 	radix_sort(&first_a, &first_b);
 }

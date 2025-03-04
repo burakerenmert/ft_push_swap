@@ -33,4 +33,5 @@ void	rrr(stack **head_a, stack **head_b);
 void	radix_sort(stack **a, stack **b);
 int	calculate_max_bits(int max);
 int	find_max_index(stack *a);
+int	check_sorted(stack *first);
 #endif

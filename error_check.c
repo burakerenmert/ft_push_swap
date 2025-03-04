@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:47:36 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/04 04:26:30 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/04 05:47:18 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,14 @@ void	check_duplicate_numbers(stack **first)
 		}
 		current = current->next;
 	}
+}
+int	check_sorted(stack *first)
+{
+    while (first && first->next)
+    {
+        if (first->data > first->next->data)
+            return 0;
+        first = first->next;
+    }
+    exit(0);
 }
