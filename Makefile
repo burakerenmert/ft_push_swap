@@ -7,7 +7,7 @@ PRINTF_DIR = ft_printf
 PRINTF = $(PRINTF_DIR)/libftprintf.a
 
 SRC = push_swap.c error_check.c atoi.c get_index.c push_functions.c\
-reverse_rotate_functions.c rotate_functions.c swap_functions.c radix.c
+reverse_rotate_functions.c rotate_functions.c swap_functions.c radix.c sort_three.c
 OBJ = $(SRC:.c=.o)
 
 NAME = push_swap
