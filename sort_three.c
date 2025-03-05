@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 00:05:20 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/05 03:35:02 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/05 04:33:58 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	move_to_top(stack **first, int pos)
     }
 	i++;
 }
-
 int find_min_place(stack **first)
 {
 	stack *head;

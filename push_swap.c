@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/05 02:25:00 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/05 03:39:22 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,4 @@ int main(int ac, char **av)
 		sort_five(&first_a, &first_b);
 	else
 		radix_sort(&first_a, &first_b);
-	print_stack_a(first_a);
 }
