@@ -36,4 +36,7 @@ int	find_max_index(stack *a);
 int	check_sorted(stack *first);
 void	sort_three(stack **first);
 int find_max_place(stack **first);
+int find_min_place(stack **first);
+void	sort_five(stack **first_a, stack **first_b);
+void	move_to_top(stack **first, int pos);
 #endif
