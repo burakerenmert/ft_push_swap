@@ -6,15 +6,15 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 00:55:58 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/06 03:16:18 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:41:47 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(stack **head_a, stack **head_b)
+void	pa(t_stack **head_a, t_stack **head_b)
 {
-	stack	*first_b;
+	t_stack	*first_b;
 
 	first_b = *head_b;
 	*head_b = first_b -> next;
@@ -25,9 +25,9 @@ void	pa(stack **head_a, stack **head_b)
 	ft_printf("pa\n");
 }
 
-void	pb(stack **head_a, stack **head_b)
+void	pb(t_stack **head_a, t_stack **head_b)
 {
-	stack	*first_a;
+	t_stack	*first_a;
 
 	first_a = *head_a;
 	*head_a = first_a -> next;

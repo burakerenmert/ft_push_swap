@@ -6,13 +6,13 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 05:13:55 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/06 03:21:50 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:42:13 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_max_index(stack *a)
+int	find_max_index(t_stack *a)
 {
 	int	max;
 
@@ -36,7 +36,7 @@ int	calculate_max_bits(int max)
 	return (bits);
 }
 
-void	radix_sort(stack **a, stack **b)
+void	radix_sort(t_stack **a, t_stack **b)
 {
 	int	max;
 	int	max_bits;

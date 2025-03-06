@@ -6,13 +6,13 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 00:05:20 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/06 03:32:58 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:43:23 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	move_to_top(stack **first, int pos)
+void	move_to_top(t_stack **first, int pos)
 {
 	int			size;
 	static int	i = 0;
@@ -37,9 +37,9 @@ void	move_to_top(stack **first, int pos)
 	i++;
 }
 
-int	find_min_place(stack **first)
+int	find_min_place(t_stack **first)
 {
-	stack	*head;
+	t_stack	*head;
 	int		j;
 	int		place;
 	int		max_index;
@@ -61,9 +61,9 @@ int	find_min_place(stack **first)
 	return (place);
 }
 
-int	find_max_place(stack **first)
+int	find_max_place(t_stack **first)
 {
-	stack	*head;
+	t_stack	*head;
 	int		j;
 	int		place;
 	int		max_index;
@@ -85,11 +85,11 @@ int	find_max_place(stack **first)
 	return (place);
 }
 
-void	sort_three(stack **first)
+void	sort_three(t_stack **first)
 {
 	int		max_pos;
-	stack	*head;
-	stack	*second;
+	t_stack	*head;
+	t_stack	*second;
 
 	max_pos = find_max_place(first);
 	if (max_pos == 0)
@@ -102,7 +102,7 @@ void	sort_three(stack **first)
 		sa(first);
 }
 
-void	sort_five(stack **first_a, stack **first_b)
+void	sort_five(t_stack **first_a, t_stack **first_b)
 {
 	int	min_pos;
 

@@ -6,16 +6,16 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 19:29:34 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/06 03:28:41 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:43:40 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(stack **head)
+void	sa(t_stack **head)
 {
-	stack	*first;
-	stack	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!head || !*head || !(*head)->next)
 		return ;
@@ -27,10 +27,10 @@ void	sa(stack **head)
 	ft_printf("sa\n");
 }
 
-void	sb(stack **head)
+void	sb(t_stack **head)
 {
-	stack	*first;
-	stack	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!head || !*head || !(*head)->next)
 		return ;
@@ -42,7 +42,7 @@ void	sb(stack **head)
 	ft_printf("sb\n");
 }
 
-void	ss(stack **head_a, stack **head_b)
+void	ss(t_stack **head_a, t_stack **head_b)
 {
 	sa(head_a);
 	sb(head_b);

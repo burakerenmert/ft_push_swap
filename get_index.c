@@ -6,15 +6,15 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:33:02 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/06 03:14:55 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:41:26 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	get_array(stack **first)
+void	get_array(t_stack **first)
 {
-	stack	*start;
+	t_stack	*start;
 	int		size;
 	int		*arr;
 	int		i;
@@ -67,9 +67,9 @@ void	bubble_sort(int *arr, int size)
 	}
 }
 
-void	get_index(stack *head, int *arr, int size)
+void	get_index(t_stack *head, int *arr, int size)
 {
-	stack	*first;
+	t_stack	*first;
 	int		i;
 
 	first = head;

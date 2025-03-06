@@ -6,13 +6,13 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:47:36 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/06 03:08:18 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:40:58 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error_check(char **args, stack **first)
+void	error_check(char **args, t_stack **first)
 {
 	int	i;
 	int	num;
@@ -30,11 +30,11 @@ void	error_check(char **args, stack **first)
 	check_duplicate_numbers(first);
 }
 
-void	fill_stack(int arg, stack **first)
+void	fill_stack(int arg, t_stack **first)
 {
-	stack	*new_node;
+	t_stack	*new_node;
 
-	new_node = malloc(sizeof(stack));
+	new_node = malloc(sizeof(t_stack));
 	if (!new_node)
 		exit(1);
 	new_node->data = arg;
@@ -42,10 +42,10 @@ void	fill_stack(int arg, stack **first)
 	*first = new_node;
 }
 
-void	check_duplicate_numbers(stack **first)
+void	check_duplicate_numbers(t_stack **first)
 {
-	stack	*current;
-	stack	*compare;
+	t_stack	*current;
+	t_stack	*compare;
 
 	current = *first;
 	while (current != NULL)
@@ -61,7 +61,7 @@ void	check_duplicate_numbers(stack **first)
 	}
 }
 
-int	check_sorted(stack *first)
+int	check_sorted(t_stack *first)
 {
 	while (first && first->next)
 	{

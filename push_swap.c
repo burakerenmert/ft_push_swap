@@ -6,15 +6,15 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/06 03:18:43 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:41:59 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_stack(stack **first)
+void	free_stack(t_stack **first)
 {
-	stack	*tmp;
+	t_stack	*tmp;
 
 	while (*first)
 	{
@@ -26,8 +26,8 @@ void	free_stack(stack **first)
 
 int	main(int ac, char **av)
 {
-	stack	*first_a;
-	stack	*first_b;
+	t_stack	*first_a;
+	t_stack	*first_b;
 
 	if (ac < 2)
 		exit(1);
