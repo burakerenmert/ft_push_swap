@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 05:13:55 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/05 03:28:56 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/06 03:21:50 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	find_max_index(stack *a)
 {
-	int max;
-	
+	int	max;
+
 	max = a->index;
 	while (a)
 	{
@@ -25,42 +25,44 @@ int	find_max_index(stack *a)
 	}
 	return (max);
 }
+
 int	calculate_max_bits(int max)
 {
-	int bits;
+	int	bits;
 
 	bits = 0;
 	while ((max >> bits) != 0)
 		bits++;
 	return (bits);
 }
-void    radix_sort(stack **a, stack **b)
-{
-	if (!a || !*a)
-		return;
-	int max;
-	int max_bits;
-	int i;
-	int j;
-	int size;
 
+void	radix_sort(stack **a, stack **b)
+{
+	int	max;
+	int	max_bits;
+	int	i;
+	int	j;
+	int	size;
+
+	if (!a || !*a)
+		return ;
 	max = find_max_index(*a);
 	max_bits = calculate_max_bits(max);
 	i = 0;
 	size = max + 1;
 	while (i < max_bits)
 	{
-        j = 0;
+		j = 0;
 		while (j < size)
 		{
-            if ((*a) && (((*a)->index >> i) & 1))
-                ra(a);
+			if ((*a) && (((*a)->index >> i) & 1))
+				ra(a);
 			else if (*a)
 				pb(a, b);
 			j++;
-        }
-        while (*b)
-            pa(a, b);
-        i++;
-    }
+		}
+		while (*b)
+			pa(a, b);
+		i++;
+	}
 }

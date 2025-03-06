@@ -3,41 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/05 03:39:22 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/06 03:18:43 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_index(stack *head)
+void	free_stack(stack **first)
 {
-	ft_printf("index : ");
-	while (head != NULL)
+	stack	*tmp;
+
+	while (*first)
 	{
-		ft_printf("%d -> ", head->index);
-		head = head->next;
+		tmp = *first;
+		*first = (*first)->next;
+		free(tmp);
 	}
-	ft_printf("NULL\n");
 }
-void	print_stack_a(stack *first)
+
+int	main(int ac, char **av)
 {
-	ft_printf("stack a : ");
-	while (first != NULL)
-    {
-        ft_printf("%d -> ", first->data);
-        first = first->next;
-    }
-	ft_printf("NULL\n");
-}
-int main(int ac, char **av)
-{
+	stack	*first_a;
+	stack	*first_b;
+
 	if (ac < 2)
 		exit(1);
-	stack *first_a;
-	stack *first_b;
 	first_a = NULL;
 	first_b = NULL;
 	error_check(av, &first_a);
@@ -45,8 +38,10 @@ int main(int ac, char **av)
 	get_array(&first_a);
 	if (ac == 4)
 		sort_three(&first_a);
-	else if(ac == 6)
+	else if (ac == 6)
 		sort_five(&first_a, &first_b);
 	else
 		radix_sort(&first_a, &first_b);
+	free_stack(&first_a);
+	free_stack(&first_b);
 }

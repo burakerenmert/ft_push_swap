@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:33:02 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/04 05:11:02 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:14:55 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	get_array(stack **first)
 {
-	stack *start;
-	int size;
-	int *arr;
-	int i;
-	
+	stack	*start;
+	int		size;
+	int		*arr;
+	int		i;
+
 	start = *first;
 	size = 1;
 	i = 0;
-	while(start->next != NULL)
+	while (start->next != NULL)
 	{
 		start = start->next;
 		size++;
@@ -30,7 +30,7 @@ void	get_array(stack **first)
 	start = *first;
 	arr = malloc(sizeof(int) * size);
 	if (!arr)
-		return;
+		return ;
 	while (i < size)
 	{
 		arr[i++] = start->data;
@@ -38,47 +38,53 @@ void	get_array(stack **first)
 	}
 	bubble_sort(arr, size);
 	get_index(*first, arr, size);
-    free(arr);
+	free(arr);
 }
-void    bubble_sort(int *arr, int size)
-{
-    int swapped = 1;
-    while (swapped)
-    {
-        swapped = 0;
-        int i = 0;
-        while (i < size - 1)
-        {
-            if (arr[i] > arr[i + 1])
-            {
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
-                swapped = 1;
-            }
-            i++;
-        }
-        size--;
-    }
-}
-void    get_index(stack *head, int *arr, int size)
-{
-    stack *first;
-    int i;
 
-    first = head;
-    while (first != NULL)
-    {
-        i = 0;
-        while (i < size)
-        {
-            if (first->data == arr[i])
-            {
-                first->index = i;
-                break;
-            }
-            i++;
-        }
-        first = first->next;
-    }
+void	bubble_sort(int *arr, int size)
+{
+	int	swapped;
+	int	i;
+	int	temp;
+
+	swapped = 1;
+	while (swapped)
+	{
+		swapped = 0;
+		i = 0;
+		while (i < size - 1)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				temp = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = temp;
+				swapped = 1;
+			}
+			i++;
+		}
+		size--;
+	}
+}
+
+void	get_index(stack *head, int *arr, int size)
+{
+	stack	*first;
+	int		i;
+
+	first = head;
+	while (first != NULL)
+	{
+		i = 0;
+		while (i < size)
+		{
+			if (first->data == arr[i])
+			{
+				first->index = i;
+				break ;
+			}
+			i++;
+		}
+		first = first->next;
+	}
 }

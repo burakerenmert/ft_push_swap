@@ -6,17 +6,18 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 03:49:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/04 03:56:41 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:04:23 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_error()
+void	print_error(void)
 {
-    ft_printf("Error\n");
-    exit(1);
+	ft_printf("Error\n");
+	exit(1);
 }
+
 int	ft_atoi(const char *str)
 {
 	long	i;

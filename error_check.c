@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:47:36 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/04 05:47:18 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/06 03:08:18 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	error_check(char **args, stack **first)
 {
-    int i;
-	int num;
+	int	i;
+	int	num;
 
-    i = 1;
-	
-    while (args[i])
+	i = 1;
+	while (args[i])
 		i++;
 	i--;
 	while (i >= 1 && args[i])
@@ -30,10 +29,11 @@ void	error_check(char **args, stack **first)
 	}
 	check_duplicate_numbers(first);
 }
+
 void	fill_stack(int arg, stack **first)
 {
-	stack *new_node;
-	
+	stack	*new_node;
+
 	new_node = malloc(sizeof(stack));
 	if (!new_node)
 		exit(1);
@@ -41,10 +41,11 @@ void	fill_stack(int arg, stack **first)
 	new_node->next = *first;
 	*first = new_node;
 }
+
 void	check_duplicate_numbers(stack **first)
 {
-	stack *current;
-	stack *compare;
+	stack	*current;
+	stack	*compare;
 
 	current = *first;
 	while (current != NULL)
@@ -59,13 +60,14 @@ void	check_duplicate_numbers(stack **first)
 		current = current->next;
 	}
 }
+
 int	check_sorted(stack *first)
 {
-    while (first && first->next)
-    {
-        if (first->data > first->next->data)
-            return 0;
-        first = first->next;
-    }
-    exit(0);
+	while (first && first->next)
+	{
+		if (first->data > first->next->data)
+			return (0);
+		first = first->next;
+	}
+	exit(0);
 }
