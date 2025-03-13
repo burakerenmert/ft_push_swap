@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 03:33:49 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/13 14:34:18 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/13 14:56:58 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,5 @@ int		find_min_place(t_stack **first);
 void	sort_five(t_stack **first_a, t_stack **first_b);
 void	move_to_top(t_stack **first, int pos);
 void	free_stack(t_stack **first);
+void	sort_small(t_stack **a, t_stack **b);
 #endif

@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/13 14:32:33 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/13 14:57:35 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	main(int ac, char **av)
 	get_array(&first_a);
 	if (ac == 4)
 		sort_three(&first_a);
-	else if (ac == 6)
-		sort_five(&first_a, &first_b);
+	else if (ac <= 11 && ac > 4)
+		sort_small(&first_a, &first_b);
 	else
 		radix_sort(&first_a, &first_b);
 	free_stack(&first_a);
