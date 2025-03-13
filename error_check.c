@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:47:36 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/06 03:40:58 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/13 14:38:57 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	error_check(char **args, t_stack **first)
 	i--;
 	while (i >= 1 && args[i])
 	{
-		num = ft_atoi(args[i]);
+		num = ft_atoi(args[i], first);
 		fill_stack(num, first);
 		i--;
 	}
@@ -54,7 +54,7 @@ void	check_duplicate_numbers(t_stack **first)
 		while (compare != NULL)
 		{
 			if (current->data == compare->data)
-				print_error();
+				print_error(first);
 			compare = compare->next;
 		}
 		current = current->next;
@@ -63,11 +63,17 @@ void	check_duplicate_numbers(t_stack **first)
 
 int	check_sorted(t_stack *first)
 {
+	t_stack	*head;
+
+	head = first;
 	while (first && first->next)
 	{
 		if (first->data > first->next->data)
 			return (0);
 		first = first->next;
 	}
+	first = head;
+	if (first)
+		free_stack(&first);
 	exit(0);
 }

@@ -6,19 +6,21 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 03:49:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/06 03:04:23 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/13 14:36:42 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_error(void)
+void	print_error(t_stack **first_a)
 {
 	ft_printf("Error\n");
+	if (first_a)
+		free_stack(first_a);
 	exit(1);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str, t_stack **first)
 {
 	long	i;
 	long	sign;
@@ -38,10 +40,10 @@ int	ft_atoi(const char *str)
 		sum *= 10;
 		sum += str[i] - 48;
 		if ((sum * sign) > MAX_INT || (sum * sign) < MIN_INT)
-			print_error();
+			print_error(first);
 		i++;
 	}
 	if (!(str[i] <= 57 && str[i] >= 48) && (str[i] != ' ') && (str[i] != '\0'))
-		print_error();
+		print_error(first);
 	return (sum * sign);
 }
