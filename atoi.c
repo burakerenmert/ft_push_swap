@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   atoi.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 03:49:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/13 14:36:42 by burakerenme      ###   ########.fr       */
+/*   Created: 2025/03/04 03:49:47 by buramert          #+#    #+#             */
+/*   Updated: 2025/03/13 19:00:45 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

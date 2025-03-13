@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:47:36 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/13 14:38:57 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/13 19:00:34 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

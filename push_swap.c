@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/13 14:57:35 by burakerenme      ###   ########.fr       */
+/*   Created: 2025/02/05 04:22:47 by buramert          #+#    #+#             */
+/*   Updated: 2025/03/13 19:00:12 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 00:05:20 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/13 14:56:42 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/03/13 18:52:51 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,10 @@ void	sort_three(t_stack **first)
 	if (head->index > second->index)
 		sa(first);
 }
+
 void	sort_small(t_stack **a, t_stack **b)
 {
-	int size;
+	int	size;
 
 	size = (find_max_index(*a) + 1);
 	while (size > 3)
@@ -115,20 +116,4 @@ void	sort_small(t_stack **a, t_stack **b)
 	sort_three(a);
 	while (*b)
 		pa(a, b);
-}
-void	sort_five(t_stack **first_a, t_stack **first_b)
-{
-	int	min_pos;
-
-	min_pos = find_min_place(first_a);
-	if (min_pos != 0)
-		move_to_top(first_a, min_pos);
-	pb(first_a, first_b);
-	min_pos = find_min_place(first_a);
-	if (min_pos != 0)
-		move_to_top(first_a, min_pos);
-	pb(first_a, first_b);
-	sort_three(first_a);
-	pa(first_a, first_b);
-	pa(first_a, first_b);
 }

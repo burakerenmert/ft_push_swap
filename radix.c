@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 05:13:55 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/03/06 03:48:51 by burakerenme      ###   ########.fr       */
+/*   Created: 2025/03/04 05:13:55 by buramert          #+#    #+#             */
+/*   Updated: 2025/03/13 18:59:57 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
